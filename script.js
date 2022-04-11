@@ -3,12 +3,12 @@ var generateBtn = document.querySelector("#generate");
 
     // 1. Prompt the user for the password criteria
     //      a. Password lenght 8 < 128
-var alphabet = "abcdefghijklmnopqrstuvwxyz"
+var alphabet = " abcdefghijklmnopqrstuvwxyz"
 var lowercaseLetters = alphabet.split('');
-let uppercaseLetters = alphabet.toUpperCase();
+var uppercaseLetters = alphabet.toUpperCase();
 uppercaseLetters = uppercaseLetters.split('');
-var numbers = '123456789'.split('');
-var specialCharacters = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+var numbers = ' 123456789'.split('');
+var specialCharacters = " !#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
 
 var inputPasswordLength = function() {
 
