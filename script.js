@@ -28,9 +28,20 @@ var inputPasswordLength = function() {
   }
      
 }
-inputPasswordLength();
+//      b. Lowercase, Uppercase, special characters
+var inputCharacters = function() {
+  var desiredCharacters = [];
+  desiredCharacters[0] = window.confirm("Would you like LOWERCASE CHARACTERS in your password? Select 'Ok' if so, if not then please select 'Cancel'");
+  desiredCharacters[1] = window.confirm("Would you like UPPERCASE CHARACTERS in your password? Select 'Ok' if so, if not then please select 'Cancel'");
+  desiredCharacters[2] = window.confirm("Would you like NUMBERS in your password? Select 'Ok' if so, if not then please select 'Cancel'");
+  desiredCharacters[3] = window.confirm("Would you like SPECIAL CHARACTERS in your password? Select 'Ok' if so, if not then please select 'Cancel'");
+  desiredCharacters = JSON.stringify(desiredCharacters);
+  localStorage.setItem("desiredCharacters", desiredCharacters);
+  
+}
 
-    //      b. Lowercase, Uppercase, special characters
+    
+
     // 2. validate the input.
     // 3. Display password to the page. 
 
