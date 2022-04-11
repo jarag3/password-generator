@@ -37,7 +37,7 @@ var inputCharacters = function() {
   desiredCharacters[3] = window.confirm("Would you like SPECIAL CHARACTERS in your password? Select 'Ok' if so, if not then please select 'Cancel'");
   desiredCharacters = JSON.stringify(desiredCharacters);
   localStorage.setItem("desiredCharacters", desiredCharacters);
-  
+
 }
 
     
@@ -53,11 +53,30 @@ var inputCharacters = function() {
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  inputPasswordLength();
+  inputCharacters();
 
-  passwordText.value = password;
+  desiredCharacters = JSON.parse(desiredCharacters);
 
+  // password generation logic 
+  for (var i = 0; i < passwordLength; i++) {
+    randomNumArr = [];
+    randomNum = Math.random();
+    console.log(randomNum)
+
+    if(desiredCharacters[1] && randomNum < 0.25) {
+      // generate a random lowercase value and store it in password
+    }
+    else if(desiredCharacters[2] && randomNum > 0.25 && randomNum < 0.50) {
+
+    } 
+    else if(desiredCharacters[3] && randomNum > 0.50 && randomNum < 0.75) {
+
+    }
+    else if(desiredCharacters[4] && randomNum > 0.75) {
+
+    }
+  }
 }
 
 // Add event listener to generate button
