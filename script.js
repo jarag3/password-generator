@@ -1,8 +1,26 @@
 // Assignment code here
+var generateBtn = document.querySelector("#generate");
+
+    // 1. Prompt the user for the password criteria
+    //      a. Password lenght 8 < 128
+var passwordLength = window.prompt("Please specify how many characters you'd like.");
+
+var userInput = function() {
+  if (userclick) {
+    var passwordLength = window.prompt("Please specify how many characters you'd like.");
+  }
+}
+
+
+    //      b. Lowercase, Uppercase, special characters
+    // 2. validate the input.
+    // 3. Display password to the page. 
+
+
 
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+
 
 // Write password to the #password input
 function writePassword() {
