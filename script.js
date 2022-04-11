@@ -3,14 +3,18 @@ var generateBtn = document.querySelector("#generate");
 
     // 1. Prompt the user for the password criteria
     //      a. Password lenght 8 < 128
-var passwordLength = window.prompt("Please specify how many characters you'd like.");
+var inputPasswordLength = function() {
 
-var userInput = function() {
-  if (userclick) {
-    var passwordLength = window.prompt("Please specify how many characters you'd like.");
-  }
+  var passwordLength = window.prompt("Please specify how many characters between 8 and 128 for your password length.");
+
+    // 
+    if (passwordLength === "" || passwordLength === null || passwordLength < 8 || passwordLength > 128)
+    {
+      window.alert("Invalid response! Please enter a value between 8 and 128.")
+      return inputPasswordLength();
+    }
 }
-
+inputPasswordLength();
 
     //      b. Lowercase, Uppercase, special characters
     // 2. validate the input.
